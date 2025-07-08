@@ -24,6 +24,19 @@ mvn spring-boot:run -Dspring-boot.run.profiles=dev
 
 ### REST requests (POS)
 
+--request POST \
+  --data '{
+    "name": "Stadtbäckerei Schaller GmbH",
+    "description": "Traditional German bakery",
+    "type": "BAKERY",
+    "campus": "MAIN",
+    "street": "Maximilianstraße",
+    "houseNumber": "45",
+    "postalCode": 95444,
+    "city": "Bayreuth"
+  }' \
+  http://localhost:8080/api/pos
+  
 #### Get POS
 
 All POS:
